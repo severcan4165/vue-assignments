@@ -3,13 +3,15 @@
         <div class="row">
             <div class="col-xs-12">
                 <br>
-                <button class="btn btn-primary">Mavi Temayı Yükle</button>
-                <button class="btn btn-success">Yeşil Temayı Yükle</button>
-                <button class="btn btn-danger">Kırmızı Temayı Yükle </button>
+                <button @click="selectedPage = 'appBlue'" class="btn btn-primary">Mavi Temayı Yükle</button>
+                <button @click="selectedPage = 'appGreen'" class="btn btn-success">Yeşil Temayı Yükle</button>
+                <button @click="selectedPage = 'appRed'" class="btn btn-danger">Kırmızı Temayı Yükle </button>
                 <hr>
-                <app-blue></app-blue>
-                <app-green></app-green>
-                <app-red></app-red>
+                
+                <component :is="selectedPage" >
+                    <h1>{{ selectedPage }} teması</h1>
+                </component>
+                
             </div>
         </div>
     </div>
@@ -25,6 +27,11 @@
             appBlue: Blue,
             appGreen: Green,
             appRed: Red
+        },
+        data: function(){
+            return{
+                selectedPage: "Blue"
+            }
         }
     }
 </script>
