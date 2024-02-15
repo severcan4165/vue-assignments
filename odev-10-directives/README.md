@@ -1,4 +1,4 @@
-# form-verilerini-okumak
+# directive-kullanimi
 
 > A Vue.js project
 
