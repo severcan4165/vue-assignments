@@ -4,9 +4,9 @@
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">VUEX</h1>
         <hr>
-        <app-result :counter="counter"></app-result>
+        <app-result ></app-result>
         <hr>
-        <app-counter @counterEvent="counter += $event"></app-counter>
+        <app-counter></app-counter>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
   export default {
     data(){
       return {
-        counter : 0
+    
       }
     },
     components: {
