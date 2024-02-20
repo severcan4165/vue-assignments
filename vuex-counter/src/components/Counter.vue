@@ -9,10 +9,12 @@
 export default {
   methods : {
     incrementCounter(){
-      this.$store.state.counter++;
+      // this.$store.state.counter++;
+      this.$store.commit("updateCounter", 1);
     },
     decrementCounter(){
-      this.$store.state.counter--;
+      // this.$store.state.counter--;
+      this.$store.commit("updateCounter",-1)
     }
   }
 }
